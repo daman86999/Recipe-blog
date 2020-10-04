@@ -58,7 +58,7 @@ nav {
 .menu-btn__burger::before,
 .menu-btn__burger::after {
   width: 30px;
-  height: 6px;
+  height: 4px;
 
   border-radius: 5px;
   background-color: #fff;
@@ -72,10 +72,10 @@ nav {
   position: absolute;
 }
 .menu-btn__burger::before {
-  transform: translateY(-16px);
+  transform: translateY(-10px);
 }
 .menu-btn__burger::after {
-  transform: translateY(16px);
+  transform: translateY(10px);
 }
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
@@ -187,7 +187,7 @@ li a:focus {
   text-shadow: 0px 1px 2px #a79c02 ;
   transition: all .2s;
   cursor: pointer;
-  z-index: 1;
+ 
 }
 
 
@@ -202,15 +202,6 @@ li a:focus {
     text-shadow: -5px 3px #f7d722ef;
     transition:ease-in-out 0.2s ;
 }
-.highlight:after{
-    background-color: #5282e9;
-    content: '';
-    width: 50px;
-    height: 4px;
-    position: relative;
-    top: 20px;
-   
-}
 
 .emoji{
     font-size:25px;
@@ -222,7 +213,7 @@ li a:focus {
     overflow: hidden;
     transition: ease 1s;
     margin-top: 20px;
-    height: 100vh;
+    
 }
 
 .hero .s1 {
@@ -230,8 +221,6 @@ li a:focus {
     flex-direction: column;
     width: 50%;
     align-items: flex-end;
-    
-    justify-content: space-around;
     
 
 }
@@ -243,12 +232,14 @@ li a:focus {
     color: white;
     margin: 20px;
     padding: 10px 10px;
-    border-radius: 10px;
+    border-radius-left: 50%;
+    border-radius-right: 50%;
     background-color:#0084ff;
 }
 
 .hero .s2{
-    
+    position:relative;
+    top:30px;
     
 }
 
