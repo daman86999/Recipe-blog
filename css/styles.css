@@ -219,7 +219,7 @@ li a:focus {
 .hero .s1 {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     align-items: flex-end;
     
 
@@ -232,15 +232,13 @@ li a:focus {
     color: white;
     margin: 20px;
     padding: 10px 10px;
-    border-radius-left: 50%;
-    border-radius-right: 50%;
+    border-radius: 2em;
     background-color:#0084ff;
 }
 
 .hero .s2{
     position:relative;
-    top:30px;
-    
+
 }
 
 @media only screen and (min-width: 700px) {
