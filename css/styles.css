@@ -41,11 +41,11 @@ nav {
 
 .menu-btn {
   background-color:rgb(0, 132, 255); ;
-  position: fixed;
+  position: sticky;
   top:50px;
   height: 70px;
   width: 70px;
-  z-index: 2;
+  z-index:1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -220,7 +220,7 @@ li a:focus {
     display: flex;
     flex-direction: column;
   
-    align-items: flex-end;
+
     
 
 }
