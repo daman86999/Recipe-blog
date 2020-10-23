@@ -224,31 +224,72 @@ a:hover {
 	color: #222835;
 	background-color: white;
 }
-#cardContainer {
-	padding: 40px 0;
+.cardContainer {
+	padding: 20px 40px;
   }
 
 .grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-	: 15px;
-	align-items: stretch;
+	grid-gap: 2rem;
+	
   }
   
-  .grid > article {
-	border: 1px solid #ccc;
+  .grid .article {
 	box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	height: 92%;
+	
   }
   
-  .grid > article img {
+  .grid .article img {
+	transition: 1.3s all;
 	max-width: 100%;
+	overflow: hidden;
+	opacity: 0.9;
+	filter: brightness(0.8);
+  }
+  .grid .article img:hover{
+	  transform: scale(1.1);
+	  transition: 1.3s all;
+	  filter: brightness(0.96);
   }
   
   .grid .text {
 	padding: 20px;
+	border-radius: 20% 20% 0 0;
+	background-color: rgb(255, 255, 255);
+	position: relative;
+	top: -60px;
+	
   }
 
-.card * {
+  .grid .text h3{
+	  color: #032f58;
+	  margin-top: 2px;
+	  padding-bottom: 15px;
+  }
+  .label{
+	 margin-top: 20px;
+  }
+
+  .label li{
+		font-size: 0.67rem;
+		display: inline-block;
+		padding: 3px 15px;
+		color: white;
+		margin-right: 10px;
+		border-radius: 20px;
+		background-color: #ff9100ea;
+  }
+
+  .see-recipe{
+	  color: white;
+	  margin-top: 15px;
+	  background-color: #020a53;
+  }
+
+.cardContainer{
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -469,18 +510,15 @@ main {
 	.flower-div {
 		width: 36.5%;
 	}
-	.card {
-		grid-template-columns: repeat(2, 1fr);
-    }
+
     .hero{
         flex-direction: row; 
 	}
 	
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		grid-gap: 3rem;
-		align-items: stretch;
+		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+		grid-gap: 2.5rem;
 	  }
 	.buttons p{
 		   margin: auto 0;
@@ -496,9 +534,7 @@ main {
 }
 
 @media (min-width: 900px) {
-	.card {
-		grid-template-columns: repeat(3, 1fr);
-    }
+	
     .buttons{
 		display: flex;
 		align-content: center;
@@ -516,9 +552,7 @@ main {
 }
 
 @media all and (max-width: 768px) {
-	article {
-		margin-top: 90px;
-	}
+	
 	
 }
 

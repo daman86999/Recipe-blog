@@ -31,18 +31,18 @@ const searchFunction = () => {
 }
 
 function createMealcard(meals){
-  const cardContainer= document.getElementById("cardContainer");
-  cardContainer.innerHTML=`
-  <div class="five-column shadow-sm rounded-20">
-  <div class="p-20">
-      <h3 class="card-title"><b> ${meals[0].strMeal} </b></h3>
-      <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit rem hic placeat accusantium veritatis.</p>
-      <a href="" class="btn btn-white"> Buy Now</a>
+  const gridContainer= document.getElementById("gridContainer");
+  for(x in meals){
+  gridContainer.innerHTML +=`
+  <div class="article">
+  <img src="${meals[x].strMealThumb}" alt="Sample photo">
+  <div class="text">
+    <h3>${meals[x].strMeal}</h3>
+    <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+    <ul class="label"><li>${meals[x].strCategory}</li><li>${meals[x].strArea}</li></ul>
+    <a href="#" class="btn see-recipe">See Recipe</a>
   </div>
-  <div class="centered" style="padding: 10px;">
-      <img class=" card-image" src="${meals[0].strMealThumb}" alt="">                    
-  </div>    
 </div>
   `
-
+}
 }
