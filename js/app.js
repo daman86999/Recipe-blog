@@ -35,7 +35,7 @@ function createMealcard(meals){
   for(x in meals){
   gridContainer.innerHTML +=`
   <div class="article">
-  <img src="${meals[x].strMealThumb}" alt="Sample photo">
+  <img src="${meals[x].strMealThumb} loading="lazy" alt="Sample photo">
   <div class="text">
     <h3>${meals[x].strMeal}</h3>
     <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>

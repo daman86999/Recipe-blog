@@ -225,7 +225,7 @@ a:hover {
 	background-color: white;
 }
 .cardContainer {
-	padding: 20px 40px;
+	padding: 20px auto;
   }
 
 .grid {
@@ -284,10 +284,18 @@ a:hover {
   }
 
   .see-recipe{
-	  color: white;
-	  margin-top: 15px;
-	  background-color: #020a53;
-  }
+	color: white;
+	margin-top: 25px;
+	background-color: #020a53;
+	transition: 0.4s all;
+}
+
+.see-recipe:hover{
+	transform: translateY(-6px);
+	box-shadow: 0 4px #b7d1fc;
+	transition: 0.4s all;
+}
+
 
 .cardContainer{
 	font-family: 'Poppins', sans-serif;
