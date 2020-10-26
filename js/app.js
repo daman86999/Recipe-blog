@@ -40,7 +40,7 @@ function createMealcard(meals){
     <h3>${meals[x].strMeal}</h3>
     <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
     <ul class="label"><li>${meals[x].strCategory}</li><li>${meals[x].strArea}</li></ul>
-    <a href="#" class="btn see-recipe">See Recipe</a>
+    <a href="/html/recipe.html?${meals[x].idMeal}" class="btn see-recipe">See Recipe</a>
   </div>
 </div>
   `
