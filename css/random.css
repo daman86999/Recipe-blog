@@ -1,4 +1,10 @@
 
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
 
 html, body {
     max-width: 100%;
@@ -29,6 +35,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 
 nav {
+	background-color: white;
 	padding: 0px 40px;
 	font-family: 'Poppins', sans-serif;
 }
@@ -172,6 +179,9 @@ h6{
     font-family: 'Gloria Hallelujah', cursive
 }
 
+.meal ul{
+	margin-left:50px !important ;
+}
 .meal li{
     font-family: 'Gloria Hallelujah', cursive
 }
