@@ -58,7 +58,7 @@ function createMeal(meal){
                 <h6 class="mt-2 ml-3 ">Origin : ${meal.strArea}</h6> 
                <h6 class="mt-3 ml-3 mealNm">Ingridients</h6>
                 <ul>
-                   ${ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                ${ingredients.map(ingredient => `<img src="https://www.themealdb.com/images/ingredients/${ngredient=ingredient.substring(0, ingredient.indexOf(' -'))}-Small.png"><li>${ingredient}</li>`).join('')}
                </ul>              
            </div>
            <div class="col-lg-8 "> <h2 class="mt-3  mealNm d-none d-lg-block" >${meal.strMeal}</h3>
