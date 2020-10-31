@@ -3,12 +3,12 @@ var queryString = location.search.substring(1);
 var id = queryString;
 
 window.onload=function(){
-
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
     .then(res => res.json())
     .then(res => {
         createMeal(res.meals[0])
     });
+    
     navResponsive();
    }
 

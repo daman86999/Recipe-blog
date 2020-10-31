@@ -34,21 +34,21 @@
             <h2>All You Need is Love And Food</h2>
             <h3 class="sub">Lorem ipsum dolor sit, </h3>
             <div class="buttons">
-            <a href="" class="btn btn-white" >Find Recipe</a>
+            <a href="#s" class="btn btn-white" >Find Recipe</a>
             <p>OR</p>
             <a href="/html/random.html" class="btn btn-white" >Go Random</a>
             </div>
         </div>
-        <div class="centered flower-div"><img  id="img-pizza" src="images/pizza.png" class="dropshadow contain"></div>
+        <div class="centered pizza-div"><img  id="img-pizza" loading="lazy" src="images/pizza.png" class="dropshadow contain"></div>
     </div>
-    <section class="filter centered">
+    <section id="s" class="filter centered">
         <div class="searchbar centered">
             <input  id="searchbar" placeholder="Let's find out what to eat">
             <button id="search" type="submit">Search</button>
         </div>
-        <div class="dropdowns"></div>
+        <div id="dropdown" class="dropdown"></div>
     </section>
-    <section>
+    <section id="cards">
         <div class="cardContainer">
             <div class="grid" id="gridContainer" >
                 
@@ -69,7 +69,7 @@
 
         });
         anime({
-            targets: ".card-image",
+            targets: "#card",
             opacity: [0,1],
             duration: 3000,
             loop: false,
