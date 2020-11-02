@@ -5,33 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal generator</title>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Gloria+Hallelujah&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/random.css">
 </head>
 <body>
+  <div id="blur">
     <nav>
-        <ul class="menu">
-            <li class="logo"><a href="../index.html">FoodGANG</a></li>
-            <li class="item"><a href="../index.html">Home</a></li>
-            <li class="item"><a href="#">About</a></li>
-            <li class="item"><a href="#">Services</a></li>
-            </li>
-            <li class="item"><a href="#">Log In</a></li>
-            <li class="item"><a href="#">Sign Up</a></li>
-            <li class="toggle"><span class="bars"></span></li>
-            <li class="toggle">
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </li>
-    
-        </ul>
-    </nav>
+      <ul class="menu">
+          <li class="logo"><a href="../index.html">FoodGANG</a></li>
+          <li class="item"><a href="../index.html">Home</a></li>
+          <li class="item"><a href="#">About</a></li>
+          <li class="item"><a href="#">Services</a></li>
+          </li>
+          <li class="item"><a href="#" onclick="openL()">Log In</a></li>
+          <li class="item"><a href="#" onclick="openS()">Sign Up</a></li>
+          <li class="toggle"><span class="bars"></span></li>
+          <li class="toggle">
+              <div class="burger">
+                  <div class="line1"></div>
+                  <div class="line2"></div>
+                  <div class="line3"></div>
+              </div>
+          </li>
+  
+      </ul>
+  </nav>
     <div class="container mt-3">
         <div class="row meal col-12 mt-4 ml-1" id="meal"></div>
     </div>
+    <section class="footer">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__heading">
+              <h2>FOODGANG</h2>
+            </div>
+            <p>Created with love 🥨 by Damanpreet Singh</p>
+      
+            <ul class="social__media mt-0">
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/damanpreet-singh-72a782191/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/daman86999"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+</div>
+<div id="popupS" class="wrapper">
+  <div class="close" onclick="closePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
+  <div class="form-container">
+      <div class="header-text">Sign up for free</div>
+      <div class="google-button">
+          <button class="button">Sign Up with Google</button>
+      </div>
+      <div class="form-text">Or sign up with email</div>
+      <form class="form" name="form">
+          <label for="name" class="label">Full Name </label>
+          <input type="text" name="name" placeholder="Eg. Mary Olhson" />
+          <label for="email" class="label">Email Address </label>
+          <input type="text" name="email" placeholder="your@email.com" />
+          <input type="submit" value="Get started" name="button" />
+      </form>
+      <div class="have-account">
+          Already have an account? <span><a href="javascript:void(0)" onclick="toggle()">Log in</a></span>
+      </div>
+  </div>
+</div>
+<div id="popupL" class="wrapper">
+  <div class="close" onclick="closePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
+  <div class="form-container">
+      <div class="header-text">Login In</div>
+      <div class="google-button">
+          <button class="button">Login with Google</button>
+      </div>
+      <div class="form-text">Or Login with email</div>
+      <form class="form" name="form">
+          <label for="email" class="label">Email Address </label>
+          <input type="text" name="email" placeholder="your@email.com" />
+          <label for="password" class="label">Password</label>
+          <input type="password" name="name" placeholder="******" />
+          <input type="submit" value="Get started" name="button"/>
+      </form>
+      <div class="have-account">
+          Create a new account? <span><a href="javascript:void(0)" onclick="toggle()">Sign Up</a></span>
+      </div>
+  </div>
+</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../js/random.js">

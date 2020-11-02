@@ -7,7 +7,7 @@ window.onload = function() {
 const navResponsive = () => {
         const burgerIcon = document.querySelector(".burger")
         const items = document.querySelectorAll(".item");
-        const search = document.getElementById("search");
+      
 
         burgerIcon.addEventListener('click', () => {
                 items.forEach((item, index) => {
@@ -87,6 +87,7 @@ function createIngredientList(meal) {
      
 
         var label = document.createElement("label");
+        label.classList.add("droplabel");
         label.innerHTML = "Search for Ingredient: "
         label.htmlFor = "ingredient";
 
@@ -131,6 +132,7 @@ function createAreaList(meal) {
      
 
         var label = document.createElement("label");
+        label.classList.add("droplabel");
         label.innerHTML = "Search for Areas: "
         label.htmlFor = "area";
 
@@ -172,6 +174,7 @@ function createCategoryList(meal) {
         }
 
         var label = document.createElement("label");
+        label.classList.add("droplabel");
         label.innerHTML = "Search for Catagories: "
         label.htmlFor = "catogory";
 
@@ -192,7 +195,7 @@ function createMealselect(meals) {
 <img src="${meals[x].strMealThumb}" loading="lazy" alt="Sample photo">
 <div class="text">
   <h3>${meals[x].strMeal}</h3>
-  <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque beatae ducimus quisquama.</p>
   <a href="/html/recipe.html?${meals[x].idMeal}" class="btn see-recipe">See Recipe</a>
 </div>
 </div>
@@ -210,7 +213,7 @@ function createMealcard(meals) {
 <img src="${meals[x].strMealThumb}" loading="lazy" alt="Sample photo">
 <div class="text">
   <h3>${meals[x].strMeal}</h3>
-  <p>Collaboratively administrate empowered markets via plug-and-play networks.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque beatae ducimus quisquama.</p>
   <ul class="label"><li>${meals[x].strCategory}</li><li>${meals[x].strArea}</li></ul>
   <a href="/html/recipe.html?${meals[x].idMeal}" class="btn see-recipe">See Recipe</a>
 </div>
@@ -218,3 +221,51 @@ function createMealcard(meals) {
 `
         }
 }
+
+function navClose(){
+        const burgerIcon = document.querySelector(".burger")
+        const items = document.querySelectorAll(".item");
+      
+
+        
+                items.forEach((item, index) => {
+                        item.classList.toggle("active");
+                });
+                burgerIcon.classList.toggle('mark')
+
+}
+
+function openS(){
+        var blur= document.getElementById('blur');
+        blur.classList.add('active');
+        var popup= document.getElementById('popupS');
+        popup.classList.add('active');
+        console.log("toggle1")
+        navClose();
+
+    }
+
+    function openL(){
+        var blur= document.getElementById('blur');
+        blur.classList.add('active');
+        var popup= document.getElementById('popupL');
+        popup.classList.add('active');
+        console.log("toggle2")
+        navClose();
+    }
+
+    function toggle(){
+        var popupL= document.getElementById('popupL');
+        var popupS= document.getElementById('popupS');
+        popupL.classList.toggle('active');
+        popupS.classList.toggle('active');
+    }
+
+    function closePopup(){
+        var popupL= document.getElementById('popupL');
+        var popupS= document.getElementById('popupS');
+        var blur= document.getElementById('blur');
+        blur.classList.remove('active');
+        popupL.classList.remove('active');
+        popupS.classList.remove('active');
+    }

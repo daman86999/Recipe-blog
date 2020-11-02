@@ -78,3 +78,51 @@ function createMeal(meal){
    `;
    
 }
+
+function navClose(){
+    const burgerIcon = document.querySelector(".burger")
+    const items = document.querySelectorAll(".item");
+  
+
+    
+            items.forEach((item, index) => {
+                    item.classList.toggle("active");
+            });
+            burgerIcon.classList.toggle('mark')
+
+}
+
+function openS(){
+    var blur= document.getElementById('blur');
+    blur.classList.add('active');
+    var popup= document.getElementById('popupS');
+    popup.classList.add('active');
+    console.log("toggle1")
+    navClose();
+
+}
+
+function openL(){
+    var blur= document.getElementById('blur');
+    blur.classList.add('active');
+    var popup= document.getElementById('popupL');
+    popup.classList.add('active');
+    console.log("toggle2")
+    navClose();
+}
+
+function toggle(){
+    var popupL= document.getElementById('popupL');
+    var popupS= document.getElementById('popupS');
+    popupL.classList.toggle('active');
+    popupS.classList.toggle('active');
+}
+
+function closePopup(){
+    var popupL= document.getElementById('popupL');
+    var popupS= document.getElementById('popupS');
+    var blur= document.getElementById('blur');
+    blur.classList.remove('active');
+    popupL.classList.remove('active');
+    popupS.classList.remove('active');
+}
