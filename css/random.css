@@ -183,7 +183,8 @@ h6{
 	margin-left:25px !important ;
 }
 .meal li{
-    font-family: 'Gloria Hallelujah', cursive
+	font-family: 'Gloria Hallelujah', cursive;
+	margin-bottom:15px;
 }
 
 h2{
