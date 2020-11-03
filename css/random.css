@@ -180,7 +180,7 @@ h6{
 }
 
 .meal ul{
-	margin-left:50px !important ;
+	margin-left:25px !important ;
 }
 .meal li{
     font-family: 'Gloria Hallelujah', cursive
@@ -561,6 +561,9 @@ border-radius: 10px;
 	}
 	.menu li {
 		padding: 15px 10px;
+	}
+	.meal ul{
+		margin-left:50px !important ;
 	}
 	.menu li.button {
 		padding-right: 0;
