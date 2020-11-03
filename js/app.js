@@ -222,6 +222,64 @@ function createMealcard(meals) {
         }
 }
 
+function checkFirstName(n){
+
+        if(n.value === ""){
+                alert("Please enter Name");
+                n.focus();
+        }
+        else{
+                closePopup();
+        }
+}
+
+function checkValidationS(email){
+    
+        console.log(email.value)
+        if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+            checkFirstName(document.getElementById('firstName'));
+        }
+        else if(email.value==""){
+                alert("Enter email pls")
+                email.focus();
+        }
+        else{
+            alert("Enter valid email")
+            email.focus();   
+        }
+    }
+
+function checkValidationL(email){
+    
+    console.log(email.value)
+    if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)){
+        checkPassword(document.getElementById('password'));
+    }
+    else if(email.value==""){
+            alert("Enter email pls")
+            email.focus();
+    }
+    else{
+        alert("Enter valid email")
+        email.focus();   
+    }
+}
+
+function checkPassword(password){
+
+        if(/^[A-Za-z]\w{7,14}$/.test(password.value)){
+                closePopup();
+            }
+            else if(password.value==""){
+                    alert("Enter password pls")
+                    password.focus();
+            }
+            else{
+                alert("Enter valid password")
+                password.focus();   
+            }
+}
+
 function navClose(){
         const burgerIcon = document.querySelector(".burger")
         const items = document.querySelectorAll(".item");
