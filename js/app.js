@@ -223,7 +223,7 @@ function checkPasswordS() {
   } 
   else if (/^[A-Za-z]\w{7,14}$/.test(p1)) {
     checkPasswordc();
-    closePopup();
+    
   }else {
     alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
     document.getElementById("spassword").focus();
@@ -233,12 +233,16 @@ function checkPasswordS() {
 function checkPasswordc(){
  var p1=document.getElementById("spassword").value;
  var p2=document.getElementById("cpassword").value;
-  if(p1===p2){
+  if(p2===""){
+    alert("Please enter Confirm password");
+    document.getElementById("cpassword").focus();
+  }
+  else if(p1===p2){
     alert("Submitted successfully");
-    console.log("insidecheck")
-    closePopup()
+    console.log("insidecheck");
+    closePopup();
   }else{
-    alert("Passwords don't match")
+    alert("Passwords don't match");
     document.getElementById("cpassword").focus();
   }
 }
