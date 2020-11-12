@@ -203,4 +203,4 @@ function openSub() {
 }
 
 
-setTimeout("openSub()", 15000); 
+setTimeout("openSub()", 60000); 
