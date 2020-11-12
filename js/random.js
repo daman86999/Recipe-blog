@@ -167,11 +167,40 @@ function toggle() {
   popupS.classList.toggle("active");
 }
 
+
+function checkValidationSub(email) {
+  console.log(email.value);
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    alert("Subscribed successfully.🤭")
+  } else if (email.value == "") {
+    alert("Please Enter Email 😅");
+    email.focus();
+  } else {
+    alert("Enter valid email 😥");
+    email.focus();
+  }
+}
+
 function closePopup() {
   var popupL = document.getElementById("popupL");
   var popupS = document.getElementById("popupS");
   var blur = document.getElementById("blur");
+  var popupSub = document.getElementById("subscribe");
   blur.classList.remove("active");
   popupL.classList.remove("active");
   popupS.classList.remove("active");
+  popupSub.classList.remove("active");
 }
+
+
+function openSub() {
+  var blur = document.getElementById("blur");
+  blur.classList.add("active");
+  var sub = document.getElementById("subscribe");
+  sub.classList.add("active");
+  console.log("toggle2");
+  navClose();
+}
+
+
+setTimeout("openSub()", 15000); 

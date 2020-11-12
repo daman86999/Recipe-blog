@@ -302,6 +302,8 @@ ul.bus__list li {
   filter: blur(20px);
   pointer-events: none;
   user-select: none;
+  transition: opacity 500ms;
+  opacity: 0.7;
 }
 #popupS {
   position: absolute;
@@ -312,6 +314,7 @@ ul.bus__list li {
   visibility: hidden;
   opacity: 0;
   transition: 0.8s;
+  box-shadow: 1px 1px 9px #27282985;
 }
 #popupS.active {
   visibility: visible;
@@ -327,6 +330,7 @@ ul.bus__list li {
   visibility: hidden;
   opacity: 0;
   transition: 0.8s;
+  box-shadow: 1px 1px 9px #27282985;
 }
 #popupL.active {
   visibility: visible;
@@ -334,33 +338,53 @@ ul.bus__list li {
   transition: 0.8s;
 }
 
-.close {
-  background: teal;
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  border-radius: 50%;
-  right: -8px;
-  top: -8px;
-  font-size: 28px;
-  color: white;
+#subscribe {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.8s;
+  box-shadow: 1px 1px 9px #27282985;
+}
+#subscribe.active {
+  visibility: visible;
   opacity: 1;
-  padding-top: 2px;
-  line-height: normal;
+  transition: 0.8s;
+}
+
+.close {
+  background:teal;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  right: 0px;
+  top: 0px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  opacity: 9;
+  border-radius: 4px 4px 0 4px;
 }
 
 .close:hover {
   background: rgb(5, 92, 92);
-  color: white;
+  box-shadow: inset 1px 1px 9px #27282985;
+  opacity: 9;
 }
 .close::before {
   content: "";
-
   padding-left: 3px;
 }
 .close i {
-  position: relative;
-  bottom: 6px;
+  padding: 0 3px 4px 0;
+  color: white;
 }
 
 .wrapper {
@@ -514,6 +538,34 @@ input[type="submit"] {
   text-decoration: none;
   color: #5b86e6;
 }
+.wrapper2 {
+  width: 90%;
+  height: min-content;
+  padding: 12px 25px;
+  margin: 0.5rem auto;
+  background: #fff;
+  border-radius: 10px;
+}
+.direction {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.subs-img img {
+  width: 99%;
+  height: 70%;
+  margin: 10px auto;
+}
+.subs-container {
+  justify-content: space-around;
+}
+.no-thanks {
+  margin: 0 auto;
+  text-align: center;
+}
+.no-thanks a {
+  color: #27282986;
+}
 
 @media all and (min-width: 468px) {
   .menu {
@@ -566,4 +618,81 @@ input[type="submit"] {
     background: #fff;
     border-radius: 10px;
   }
+   
+.direction{
+  display: flex;
+  flex-direction: row;
+}
+
+.subs-img{
+background-image: url("../images/food-icons-hero-sq-new-810x810.jpg");
+width: 380px;
+height: 320px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.subs-container{
+ justify-content: space-around;
+
+}
+
+.wrapper2{
+  width: 57%;
+  padding: 19px 25px;
+  margin: 0.5rem auto;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.subs-img img{
+display: none;
+
+}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  
+  .droplabel {
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    padding: 10px;
+    box-shadow: -2px 10px 20px -10px rgba(0, 0, 0, 0.2),
+      0px -2px 20px -10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+  }
+  
+.wrapper2{
+  width: 60%;
+  padding: 19px 25px;
+  margin: 0.5rem auto;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.direction{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.subs-img img{
+
+width: 99%;
+height: 70%;
+margin: 10px auto
+
+}
+
+.subs-container{
+ justify-content: space-around;
+
+}
+.no-thanks{
+  margin: 0 auto;
+  
+}
+.no-thanks a{
+  color: #27282986;
+}
 }

@@ -568,7 +568,6 @@ ul.bus__list li {
   filter: blur(20px);
   pointer-events: none;
   user-select: none;
-  background: rgba(0, 0, 0, 0.89);
   transition: opacity 500ms;
   opacity: 0.7;
 }
@@ -634,11 +633,12 @@ ul.bus__list li {
   font-size: 30px;
   cursor: pointer;
   color: white;
-  box-shadow: inset 1px 1px 9px #27282985;
+  border-radius: 4px 4px 0 4px;
 }
 
 .close:hover {
   background: rgb(5, 92, 92);
+  box-shadow: inset 1px 1px 9px #27282985;
 }
 .close::before {
   content: "";
@@ -803,7 +803,8 @@ input[type="submit"] {
 
 .wrapper2{
   width: 90%;
-  padding: 19px 25px;
+  height: min-content;
+  padding: 12px 25px;
   margin: 0.5rem auto;
   background: #fff;
   border-radius: 10px;

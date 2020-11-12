@@ -17,7 +17,7 @@
           <li class="logo"><a href="../index.html">FoodGANG</a></li>
           <li class="item"><a href="../index.html">Home</a></li>
           <li class="item"><a href="#">About</a></li>
-          <li class="item"><a href="#">Services</a></li>
+          <li class="item"><a href="#" onclick="openSub()">Subscribe</a></li>
           </li>
           <li class="item"><a href="#" onclick="openL()">Log In</a></li>
           <li class="item"><a href="#" onclick="openS()">Sign Up</a></li>
@@ -93,6 +93,29 @@
   </div>
 </div>
 
+<div id="subscribe" class="wrapper2">
+  <div class="close" onclick="closePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
+  <div class="form-container">
+      <div class="direction">
+          <div class="subs-img">
+          <img src="../images/food-icons-hero-sq-new-810x810.jpg">
+          </div>
+          <div class="flex-col subs-container">
+              <div class="header-text">Subscribe with Email</div>
+      
+                  <p>Get Daily recipe directly to your inbox</p>
+                  <label for="email" class="label">Email Address </label>
+                  <input type="text" name="email" id="email3" placeholder="your@email.com" />
+                  <input type="submit" value="Subscribe" name="button" onclick="checkValidationSub(document.getElementById('email3'))"/>
+                  
+              
+              <div class="no-thanks">
+                   <span><a href="#" onclick="closePopup()">No Thanks</a></span>
+              </div>
+      </div>
+      </div>
+  </div>
+</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="../js/recipe.js">
