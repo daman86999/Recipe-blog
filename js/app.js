@@ -214,6 +214,35 @@ function createMealcard(meals) {
   }
 }
 
+
+function checkPasswordS() {
+  var p1=document.getElementById("spassword").value;
+   if (p1 === "") {
+    alert("Enter password pls");
+    document.getElementById("spassword").focus();
+  } 
+  else if (/^[A-Za-z]\w{7,14}$/.test(p1)) {
+    checkPasswordc();
+    closePopup();
+  }else {
+    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
+    document.getElementById("spassword").focus();
+  }
+}
+
+function checkPasswordc(){
+ var p1=document.getElementById("spassword").value;
+ var p2=document.getElementById("cpassword").value;
+  if(p1===p2){
+    alert("Submitted successfully");
+    console.log("insidecheck")
+    closePopup()
+  }else{
+    alert("Passwords don't match")
+    document.getElementById("cpassword").focus();
+  }
+}
+
 function checkFirstName(n) {
   var illegalChars = /\W/;
   if (n.value === "") {
@@ -223,8 +252,7 @@ function checkFirstName(n) {
     alert("Username cannot be a number.");
     n.focus();
   } else {
-    alert("Submitted Successfully 😁.");
-    closePopup();
+    checkPasswordS();
   }
 }
 
@@ -275,7 +303,7 @@ function checkPassword(password) {
     alert("Enter password pls");
     password.focus();
   } else {
-    alert("Enter valid password");
+    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
     password.focus();
   }
 }
@@ -337,4 +365,4 @@ function openSub() {
 }
 
 
-setTimeout("openSub()", 60000); 
+setTimeout("openSub()",10000)

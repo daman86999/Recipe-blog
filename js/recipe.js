@@ -90,10 +90,15 @@ function createMeal(meal) {
 }
 
 function checkFirstName(n) {
+  var illegalChars = /\W/;
   if (n.value === "") {
-    alert("Please enter Name");
+    alert("Please enter Username 😶");
     n.focus();
-  } else {
+  } else if (!illegalChars.test(n.value)) {
+    alert("Username cannot be a number.");
+    n.focus();
+  }else {
+    alert("Submitted successfully.🤭")
     closePopup();
   }
 }
@@ -126,6 +131,7 @@ function checkValidationL(email) {
 
 function checkPassword(password) {
   if (/^[A-Za-z]\w{7,14}$/.test(password.value)) {
+    alert("Submitted successfully.🤭")
     closePopup();
   } else if (password.value == "") {
     alert("Enter password pls");
@@ -205,5 +211,3 @@ function openSub() {
   navClose();
 }
 
-
-setTimeout("openSub()", 15000); 

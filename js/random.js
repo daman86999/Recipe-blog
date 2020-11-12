@@ -86,10 +86,15 @@ function createMeal(meal) {
 }
 
 function checkFirstName(n) {
+  var illegalChars = /\W/;
   if (n.value === "") {
-    alert("Please enter Name");
+    alert("Please enter Username 😶");
     n.focus();
-  } else {
+  } else if (!illegalChars.test(n.value)) {
+    alert("Username cannot be a number.");
+    n.focus();
+  }else {
+    alert("Submitted successfully.🤭")
     closePopup();
   }
 }
@@ -102,7 +107,7 @@ function checkValidationS(email) {
     alert("Enter email pls");
     email.focus();
   } else {
-    alert("Enter valid email");
+    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
     email.focus();
   }
 }
@@ -112,16 +117,17 @@ function checkValidationL(email) {
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     checkPassword(document.getElementById("password"));
   } else if (email.value == "") {
-    alert("Enter email pls");
+    alert("Please enter email ");
     email.focus();
   } else {
-    alert("Enter valid email");
+    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
     email.focus();
   }
 }
 
 function checkPassword(password) {
   if (/^[A-Za-z]\w{7,14}$/.test(password.value)) {
+    alert("Submitted successfully.🤭")
     closePopup();
   } else if (password.value == "") {
     alert("Enter password pls");
@@ -202,5 +208,3 @@ function openSub() {
   navClose();
 }
 
-
-setTimeout("openSub()", 60000); 
