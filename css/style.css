@@ -286,6 +286,7 @@ a:hover {
   transform: translateY(-6px);
   box-shadow: 0 4px #b7d1fc;
   transition: 0.4s all;
+  color: white;
 }
 
 .cardContainer {
@@ -1012,7 +1013,7 @@ display: none;
   }
   
 .wrapper2{
-  width: 60%;
+  width: min-content;
   padding: 19px 25px;
   margin: 0.5rem auto;
   background: #fff;
