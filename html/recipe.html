@@ -1,123 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FOODGANG</title>
-    <link rel="icon" href="../images/favicon.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Gloria+Hallelujah&family=Monoton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/random.css">
-</head>
-<body>
-  <div id="blur">
-    <nav>
-      <ul class="menu">
+    <link rel="icon" href="../images/favicon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Bungee&family=Gloria+Hallelujah&family=Monoton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/random.css" />
+  </head>
+  <body>
+    <div id="blur">
+      <nav>
+        <ul class="menu">
           <li class="logo"><a href="../index.html">FoodGANG</a></li>
-          <li class="item"><a href="../index.html">Home</a></li>
-          <li class="item"><a href="#">About</a></li>
-          <li class="item"><a href="#" onclick="openSub()">Subscribe</a></li>
-          </li>
-          <li class="item"><a href="#" onclick="openL()">Log In</a></li>
-          <li class="item"><a href="#" onclick="openS()">Sign Up</a></li>
+
           <li class="toggle"><span class="bars"></span></li>
           <li class="toggle">
-              <div class="burger">
-                  <div class="line1"></div>
-                  <div class="line2"></div>
-                  <div class="line3"></div>
-              </div>
+            <div class="burger">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
           </li>
-  
-      </ul>
-  </nav>
-    <div class="container mt-3 mb-4">
+        </ul>
+      </nav>
+      <div class="container mt-3 mb-4">
         <div class="row meal col-12 mt-4 ml-1" id="meal"></div>
-    </div>
-    <section class="footer">
+      </div>
+      <section class="footer">
         <div class="container">
           <div class="footer__content">
             <div class="footer__heading">
               <h2>FOODGANG</h2>
             </div>
             <p>Created with love 🥨 by Damanpreet Singh</p>
-      
+
             <ul class="social__media">
-              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/damanpreet-singh-72a782191/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-              <li><a href="https://github.com/daman86999"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              <li>
+                <a href="#"
+                  ><i class="fa fa-facebook" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/damanpreet-singh-72a782191/"
+                  ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://github.com/daman86999"
+                  ><i class="fa fa-github" aria-hidden="true"></i
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
       </section>
-</div>
-<div id="popupS" class="wrapper">
-  <div class="close" onclick="closePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
-  <div class="form-container">
-      <div class="header-text">Sign up for free</div>
-      <div class="google-button">
-          <button class="button">Sign Up with Google</button>
-      </div>
-      <div class="form-text">Or sign up with email</div>
-      <div class="form">
-          <label for="name" class="label" >Full Name </label>
-          <input type="text" name="name" id="firstName" placeholder="Eg. Mary Olhson" />
-          <label for="email" class="label">Email Address </label>
-          <input type="text" name="email" id="email1" placeholder="your@email.com" />
-          <input type="submit" value="Get started" name="button" onclick="checkValidationS(document.getElementById('email1'))" />
-      </div>
-      <div class="have-account">
-          Already have an account? <span><a href="javascript:void(0)" onclick="toggle()">Log in</a></span>
-      </div>
-  </div>
-</div>
-<div id="popupL" class="wrapper">
-  <div class="close" onclick="closePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
-  <div class="form-container">
-      <div class="header-text">Login In</div>
-      <div class="google-button">
-          <button class="button">Login with Google</button>
-      </div>
-      <div class="form-text">Or Login with email</div>
-      <div class="form">
-          <label for="email" class="label">Email Address </label>
-          <input type="text" name="email" id="email2" placeholder="your@email.com" />
-          <label for="password" class="label">Password</label>
-          <input type="password" name="name" id="password" placeholder="******"/>
-          <input type="submit" value="Get started" name="button" onclick="checkValidationL(document.getElementById('email2'))"/>
-      </div>
-      <div class="have-account">
-          Create a new account? <span><a href="javascript:void(0)" onclick="toggle()">Sign Up</a></span>
-      </div>
-  </div>
-</div>
-
-<div id="subscribe" class="wrapper2">
-  <div class="close" onclick="closePopup()"><i class="fa fa-times" aria-hidden="true"></i></div>
-  <div class="form-container">
-      <div class="direction">
-          <div class="subs-img">
-          <img src="../images/food-icons-hero-sq-new-810x810.jpg">
-          </div>
-          <div class="flex-col subs-container">
-              <div class="header-text">Subscribe with Email</div>
-      
-                  <p>Get Daily recipe directly to your inbox</p>
-                  <label for="email" class="label">Email Address </label>
-                  <input type="text" name="email" id="email3" placeholder="your@email.com" />
-                  <input type="submit" value="Subscribe" name="button" onclick="checkValidationSub(document.getElementById('email3'))"/>
-                  
-              
-              <div class="no-thanks">
-                   <span><a href="#" onclick="closePopup()">No Thanks</a></span>
-              </div>
-      </div>
-      </div>
-  </div>
-</div>
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="../js/recipe.js">
-</script>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../js/recipe.js"></script>
 </html>

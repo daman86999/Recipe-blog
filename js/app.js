@@ -1,19 +1,6 @@
 window.onload = function () {
-  navResponsive();
   searchFunction();
   createDropdown();
-};
-
-const navResponsive = () => {
-  const burgerIcon = document.querySelector(".burger");
-  const items = document.querySelectorAll(".item");
-
-  burgerIcon.addEventListener("click", () => {
-    items.forEach((item, index) => {
-      item.classList.toggle("active");
-    });
-    burgerIcon.classList.toggle("mark");
-  });
 };
 
 const searchFunction = () => {
@@ -49,6 +36,7 @@ const createDropdown = () => {
 };
 
 function getValueingredient() {
+  createDropdown;
   var ingredient = document.getElementById("ingredient").value;
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
     .then((res) => res.json())
@@ -214,34 +202,32 @@ function createMealcard(meals) {
   }
 }
 
-
 function checkPasswordS() {
-  var p1=document.getElementById("spassword").value;
-   if (p1 === "") {
+  var p1 = document.getElementById("spassword").value;
+  if (p1 === "") {
     alert("Enter password pls");
     document.getElementById("spassword").focus();
-  } 
-  else if (/^[A-Za-z]\w{7,14}$/.test(p1)) {
+  } else if (/^[A-Za-z]\w{7,14}$/.test(p1)) {
     checkPasswordc();
-    
-  }else {
-    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
+  } else {
+    alert(
+      "Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit"
+    );
     document.getElementById("spassword").focus();
   }
 }
 
-function checkPasswordc(){
- var p1=document.getElementById("spassword").value;
- var p2=document.getElementById("cpassword").value;
-  if(p2===""){
+function checkPasswordc() {
+  var p1 = document.getElementById("spassword").value;
+  var p2 = document.getElementById("cpassword").value;
+  if (p2 === "") {
     alert("Please enter Confirm password");
     document.getElementById("cpassword").focus();
-  }
-  else if(p1===p2){
+  } else if (p1 === p2) {
     alert("Submitted successfully");
     console.log("insidecheck");
     closePopup();
-  }else{
+  } else {
     alert("Passwords don't match");
     document.getElementById("cpassword").focus();
   }
@@ -289,7 +275,7 @@ function checkValidationL(email) {
 function checkValidationSub(email) {
   console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    alert("Subscribed successfully.🤭")
+    alert("Subscribed successfully.🤭");
   } else if (email.value == "") {
     alert("Please Enter Email 😅");
     email.focus();
@@ -307,7 +293,9 @@ function checkPassword(password) {
     alert("Enter password pls");
     password.focus();
   } else {
-    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
+    alert(
+      "Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit"
+    );
     password.focus();
   }
 }
@@ -321,52 +309,3 @@ function navClose() {
   });
   burgerIcon.classList.toggle("mark");
 }
-
-function openS() {
-  var blur = document.getElementById("blur");
-  blur.classList.add("active");
-  var popup = document.getElementById("popupS");
-  popup.classList.add("active");
-  console.log("toggle1");
-  navClose();
-}
-
-function openL() {
-  var blur = document.getElementById("blur");
-  blur.classList.add("active");
-  var popup = document.getElementById("popupL");
-  popup.classList.add("active");
-  console.log("toggle2");
-  navClose();
-}
-
-function toggle() {
-  var popupL = document.getElementById("popupL");
-  var popupS = document.getElementById("popupS");
-  popupL.classList.toggle("active");
-  popupS.classList.toggle("active");
-}
-
-function closePopup() {
-  var popupL = document.getElementById("popupL");
-  var popupS = document.getElementById("popupS");
-  var popupSub = document.getElementById("subscribe");
-  var blur = document.getElementById("blur");
-  blur.classList.remove("active");
-  popupL.classList.remove("active");
-  popupS.classList.remove("active");
-  popupSub.classList.remove("active");
-
-}
-
-function openSub() {
-  var blur = document.getElementById("blur");
-  blur.classList.add("active");
-  var sub = document.getElementById("subscribe");
-  sub.classList.add("active");
-  console.log("toggle2");
-  navClose();
-}
-
-
-setTimeout("openSub()",10000)
