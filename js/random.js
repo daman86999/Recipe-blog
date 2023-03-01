@@ -4,20 +4,6 @@ window.onload = function () {
     .then((res) => {
       createMeal(res.meals[0]);
     });
-  navResponsive();
-};
-
-const navResponsive = () => {
-  const burgerIcon = document.querySelector(".burger");
-  const items = document.querySelectorAll(".item");
-  const search = document.getElementById("search");
-
-  burgerIcon.addEventListener("click", () => {
-    items.forEach((item, index) => {
-      item.classList.toggle("active");
-    });
-    burgerIcon.classList.toggle("mark");
-  });
 };
 
 function createMeal(meal) {
@@ -26,7 +12,6 @@ function createMeal(meal) {
   mealIns = "." + mealIns;
   var lines = mealIns.split(".");
   lines.pop();
-  console.log(lines);
   var list = lines.join("<li>");
 
   const ingredients = [];
@@ -58,10 +43,11 @@ function createMeal(meal) {
                  ${ingredients
                    .map(
                      (ingredient) =>
-                       `<img src="https://www.themealdb.com/images/ingredients/${(ngredient = ingredient.substring(
-                         0,
-                         ingredient.indexOf(" -")
-                       ))}-Small.png"><li>${ingredient}</li>`
+                       `<img src="https://www.themealdb.com/images/ingredients/${(ngredient =
+                         ingredient.substring(
+                           0,
+                           ingredient.indexOf(" -")
+                         ))}-Small.png"><li>${ingredient}</li>`
                    )
                    .join("")}
 				</ul>              
@@ -93,41 +79,43 @@ function checkFirstName(n) {
   } else if (!illegalChars.test(n.value)) {
     alert("Username cannot be a number.");
     n.focus();
-  }else {
-    alert("Submitted successfully.🤭")
+  } else {
+    alert("Submitted successfully.🤭");
     closePopup();
   }
 }
 
 function checkValidationS(email) {
-  console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     checkFirstName(document.getElementById("firstName"));
   } else if (email.value == "") {
     alert("Enter email pls");
     email.focus();
   } else {
-    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
+    alert(
+      "Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit"
+    );
     email.focus();
   }
 }
 
 function checkValidationL(email) {
-  console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     checkPassword(document.getElementById("password"));
   } else if (email.value == "") {
     alert("Please enter email ");
     email.focus();
   } else {
-    alert("Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit");
+    alert(
+      "Enter valid password minimum 6 characters, 1 Uppercase letter, 1 digit"
+    );
     email.focus();
   }
 }
 
 function checkPassword(password) {
   if (/^[A-Za-z]\w{7,14}$/.test(password.value)) {
-    alert("Submitted successfully.🤭")
+    alert("Submitted successfully.🤭");
     closePopup();
   } else if (password.value == "") {
     alert("Enter password pls");
@@ -153,7 +141,6 @@ function openS() {
   blur.classList.add("active");
   var popup = document.getElementById("popupS");
   popup.classList.add("active");
-  console.log("toggle1");
   navClose();
 }
 
@@ -162,7 +149,6 @@ function openL() {
   blur.classList.add("active");
   var popup = document.getElementById("popupL");
   popup.classList.add("active");
-  console.log("toggle2");
   navClose();
 }
 
@@ -173,11 +159,9 @@ function toggle() {
   popupS.classList.toggle("active");
 }
 
-
 function checkValidationSub(email) {
-  console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-    alert("Subscribed successfully.🤭")
+    alert("Subscribed successfully.🤭");
   } else if (email.value == "") {
     alert("Please Enter Email 😅");
     email.focus();
@@ -198,13 +182,10 @@ function closePopup() {
   popupSub.classList.remove("active");
 }
 
-
 function openSub() {
   var blur = document.getElementById("blur");
   blur.classList.add("active");
   var sub = document.getElementById("subscribe");
   sub.classList.add("active");
-  console.log("toggle2");
   navClose();
 }
-

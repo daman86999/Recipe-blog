@@ -9,7 +9,6 @@ const searchFunction = () => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchItem}`)
       .then((res) => res.json())
       .then((res) => {
-        console.log(res.meals);
         createMealcard(res.meals);
       });
   });
@@ -41,7 +40,6 @@ function getValueingredient() {
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res.meals);
       createMealselect(res.meals);
     });
 }
@@ -81,11 +79,9 @@ function createIngredientList(meal) {
 
 function getValueArea() {
   var area = document.getElementById("area").value;
-  console.log(area);
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res.meals);
       createMealselect(res.meals);
     });
 }
@@ -125,11 +121,9 @@ function createAreaList(meal) {
 
 function getValueCategory() {
   var category = document.getElementById("category").value;
-  console.log(category);
   fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res.meals);
       createMealselect(res.meals);
     });
 }
@@ -225,7 +219,6 @@ function checkPasswordc() {
     document.getElementById("cpassword").focus();
   } else if (p1 === p2) {
     alert("Submitted successfully");
-    console.log("insidecheck");
     closePopup();
   } else {
     alert("Passwords don't match");
@@ -247,7 +240,6 @@ function checkFirstName(n) {
 }
 
 function checkValidationS(email) {
-  console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     checkFirstName(document.getElementById("firstName"));
   } else if (email.value == "") {
@@ -260,7 +252,6 @@ function checkValidationS(email) {
 }
 
 function checkValidationL(email) {
-  console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     checkPassword(document.getElementById("password"));
   } else if (email.value == "") {
@@ -273,7 +264,6 @@ function checkValidationL(email) {
 }
 
 function checkValidationSub(email) {
-  console.log(email.value);
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
     alert("Subscribed successfully.🤭");
   } else if (email.value == "") {
